@@ -1,4 +1,4 @@
-package BASICS;
+
 
 public class PrintingNumber {
     public static void main(String[] args) {

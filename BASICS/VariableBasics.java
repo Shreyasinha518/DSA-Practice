@@ -1,4 +1,4 @@
-//package BASICS;
+
 
 public class VariableBasics {
     public static void main(String[] args) {
@@ -10,6 +10,10 @@ public class VariableBasics {
         System.out.println(y);
         System.out.println(x*y);
         x=200+x;
+        System.out.println(x);
+        x=x-1000;
+        System.out.println(x);
+        x=x/5;
         System.out.println(x);
     }
     
