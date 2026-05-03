@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class flippedTriangle {
-    public static void main(String[] args) {
+public class Rombus {
+     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("ENTER NUMBER:");
         int n = in.nextInt();
@@ -9,10 +9,8 @@ public class flippedTriangle {
             for (int j = 1; j <= n - i; j++) {
                 System.out.print("  ");
             }
-            for (int k = 1; k <= i; k++) {
-                //int d=k+64;
-                //char ch=(char)d;
-                //System.out.print(ch +" ");
+            for (int k = 1; k <= n; k++) {
+                
                 System.out.print("* ");
 
             }
@@ -20,4 +18,5 @@ public class flippedTriangle {
         }
 
     }
+    
 }
