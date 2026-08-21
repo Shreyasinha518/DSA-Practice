@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Rectangle {
     public static void main(String[] args) {
         Scanner in =new Scanner(System.in);
-        int l,b;
+        int l;int b;
         System.out.println("ENTER THE LENGTH:");
         l=in.nextInt();
         System.out.println("ENTER THE BREATH:");

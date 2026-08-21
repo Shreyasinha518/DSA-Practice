@@ -1,5 +1,5 @@
 
-public class Swap {
+public class swap {
     public static void swapTwoNumbers(int a,int b){
         int temp=a;
         a=b;
