@@ -15,6 +15,12 @@ public class constructor {
             length=d;
 
         }
+        Car(String x,int y,double z){
+          
+            name=x;
+            seats=y;
+            length=z;  
+        }
         void print(){
             System.out.println(seats+" "+name+" "+length);
         }
@@ -26,8 +32,8 @@ public class constructor {
         c2.print();
         Car c3=new Car();
         c3.print();
-
-        
-    }
+        Car c4=new Car("Lambogani",2,4.2);  
+        c4.print();
+    } //all cars c1,c2,c3,c4 are calling different constructors Car
     
 }
