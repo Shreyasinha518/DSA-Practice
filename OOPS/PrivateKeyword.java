@@ -6,6 +6,12 @@ class Students{
         void print(){
             System.out.println(name+ "  " +rno+"  "+cgpa+"  ");
         }
+        int getRno(){   //getter
+            return rno;
+        }
+        void setRno(int x){    //setter
+            rno=x;
+        }
 
     }
 public class PrivateKeyword {
@@ -17,6 +23,9 @@ public class PrivateKeyword {
         s1.print();
         Students s2=new Students();   //Roll number is set in private
         s2.print();
+        s1.setRno(100);   //yaha pe rno even being private change hogya 
+        System.out.println(s1.getRno());//yaha we got the rollno of object 1
+        
 
         
     }
