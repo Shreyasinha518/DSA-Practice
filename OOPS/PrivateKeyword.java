@@ -1,3 +1,4 @@
+import java .util.Scanner;
 //package OOPS;
 class Students{
         String name;  //null
@@ -16,6 +17,7 @@ class Students{
     }
 public class PrivateKeyword {
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         Students s1=new Students();
         System.out.println(s1.cgpa);   //default value
         s1.cgpa=9.9;
@@ -25,7 +27,9 @@ public class PrivateKeyword {
         s2.print();
         s1.setRno(100);   //yaha pe rno even being private change hogya 
         System.out.println(s1.getRno());//yaha we got the rollno of object 1
-        
+
+        StringBuilder sb=new StringBuilder(sc.nextLine());  //String builder ka concept hai ki how we can take the input in string itself
+        System.out.println(sb);
 
         
     }
