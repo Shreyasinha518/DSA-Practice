@@ -30,7 +30,7 @@ public class studentData {
         }
 
         void print() {
-            System.out.println("Name : " + name);
+            System.out.println("\nName : " + name);
             System.out.println("Roll no : " + Rno);
             System.out.println("Array of Marks:");
 
@@ -44,12 +44,17 @@ public class studentData {
 
         Scanner in = new Scanner(System.in);
         int n=in.nextInt();
-
+        double[] arr = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
         Student s = new Student(n, in);
         s.name = "Shreya";
         s.Rno = 120;
 
         s.print();
+        s.marks[4]=100;
+        s.print();
+        Student s1=new Student(arr);
+        
+        s1.print();
 
         in.close();
     }
