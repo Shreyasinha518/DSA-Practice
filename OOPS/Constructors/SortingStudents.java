@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class SortingStudents {
 
-    public static class Student {
+    static class Student {
         String name;
         int rollNo;
-        int marks[];
+        int[] marks;
 
         Student(String name, int rollNo, int[] marks) {
             this.name = name;
@@ -13,12 +13,11 @@ public class SortingStudents {
             this.marks = marks;
         }
 
-        // Calculate total marks
         int totalMarks() {
             int total = 0;
 
-            for (int i = 0; i < marks.length; i++) {
-                total += marks[i];
+            for (int mark : marks) {
+                total += mark;
             }
 
             return total;
@@ -29,26 +28,27 @@ public class SortingStudents {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter number of students:");
+        System.out.print("Enter number of students: ");
         int n = in.nextInt();
 
-        System.out.println("Enter number of subjects:");
+        System.out.print("Enter number of subjects: ");
         int subjects = in.nextInt();
         in.nextLine();
 
         Student[] students = new Student[n];
 
+        // Input student details
         for (int i = 0; i < n; i++) {
 
-            System.out.println("Enter the name:");
+            System.out.print("Enter name: ");
             String name = in.nextLine();
 
-            System.out.println("Enter Roll Number:");
+            System.out.print("Enter roll number: ");
             int rollNo = in.nextInt();
 
             int[] marks = new int[subjects];
 
-            System.out.println("Enter the subject marks:");
+            System.out.println("Enter marks:");
 
             for (int j = 0; j < subjects; j++) {
                 marks[j] = in.nextInt();
@@ -59,8 +59,9 @@ public class SortingStudents {
             students[i] = new Student(name, rollNo, marks);
         }
 
-        // Sort students by total marks
+        // Sort by total marks (ascending)
         for (int i = 0; i < n - 1; i++) {
+
             for (int j = i + 1; j < n; j++) {
 
                 if (students[i].totalMarks() > students[j].totalMarks()) {
@@ -72,7 +73,8 @@ public class SortingStudents {
             }
         }
 
-        System.out.println("Student details sorted by marks:");
+        // Display sorted students
+        System.out.println("\nStudent details sorted by total marks:");
 
         for (int i = 0; i < n; i++) {
 
@@ -82,5 +84,7 @@ public class SortingStudents {
                 ", Total Marks: " + students[i].totalMarks()
             );
         }
+
+        in.close();
     }
 }
