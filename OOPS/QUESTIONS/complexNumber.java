@@ -47,6 +47,20 @@ void multiply(complex z){
     System.out.println("Product of complex numbers: "+real+" + "+imag+"i");
 }
 }
+void divide(complex z) {
+    double denominator = (z.r * z.r) + (z.i * z.i);
+
+    double real = (this.r * z.r + this.i * z.i) / denominator;
+    double imag = (this.i * z.r - this.r * z.i) / denominator;
+
+    if (imag < 0) {
+        System.out.println("Quotient of complex numbers: "
+                + real + " - " + (-imag) + "i");
+    } else {
+        System.out.println("Quotient of complex numbers: "
+                + real + " + " + imag + "i");
+    }
+}
 }
 
 public class complexNumber {
@@ -58,6 +72,7 @@ public class complexNumber {
         z1.add(z2);
         z1.subtract(z2);
         z1.multiply(z2);
+        z1.divide(z2);
 
     }
 
