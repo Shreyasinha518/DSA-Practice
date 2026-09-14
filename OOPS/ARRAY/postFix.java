@@ -48,22 +48,22 @@ public class postFix {
                 case "+":
                     int a=s.pop();
                     int b=s.pop();
-                    s.push(a + b);
+                    s.push(b + a);
                     break;
                 case "-":
                     a=s.pop();
                     b=s.pop();
-                    s.push(a - b);
+                    s.push(b - a);
                     break;
                 case "*":
                     a=s.pop();
                     b=s.pop();
-                    s.push(a * b);
+                    s.push(b * a);
                     break;
                 case "/":
                     a=s.pop();
                     b=s.pop();
-                    s.push(a / b);
+                    s.push(b / a);
                     break;
                 default:
                     s.push(Integer.parseInt(token));
