@@ -18,6 +18,18 @@ public static void main(String argd[]){
     Iterator <Integer> itr=list.iterator();
     while(itr.hasNext()){
         System.out.print(itr.next()+" ");
+        
+    }
+    System.out.println();
+    System.out.println("Enter the element to be searched:");
+    int key=in.nextInt();
+    int index=Collections.binarySearch(list, key);
+    if(index>=0){
+        System.out.println("ELEMENTS IS FOUND AT INDEX: "+index);
+
+    }
+    else{
+        System.out.println("ELEMENT NOT FOUND!!!!");
     }
 }
 }
