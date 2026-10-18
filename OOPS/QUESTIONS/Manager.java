@@ -16,6 +16,7 @@ public class Manager{
             int ID=itr.next();
             if(CancellationID.contains(ID)){
                 System.out.println("ID: "+ID+" is cancelled");
+                itr.remove();
             }
             else{
                 System.out.println("ID: "+ID+" is not cancelled");
@@ -30,5 +31,6 @@ public class Manager{
         }
         System.out.println();
         System.out.println("Size of the list:"+RegistrationsID.size());
+        in.close();
     }
 }
